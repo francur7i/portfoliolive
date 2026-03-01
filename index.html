@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing</title>
+    <link rel="preload" as="image" href="background.jpg" />
+    <link
+      rel="preload"
+      as="font"
+      href="fonts/Inter-VariableFont.ttf"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="landing">
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Bienvenidos a mi sitio.</h1>
+        <p>
+          Especial agradecimiento a mi mamá y a mi entorno que me motiva a
+          generar esto.
+        </p>
+        <a class="btn" href="home.html">>></a>
+      </div>
+      <div id="coords"></div>
+    </section>
+
+    <script>
+      (function () {
+        const el = document.getElementById("coords");
+        const pad = (n) => String(n).padStart(4, " ");
+        document.addEventListener("mousemove", (e) => {
+          el.textContent = `X: ${pad(e.clientX)}  Y: ${pad(e.clientY)}`;
+        });
+      })();
+    </script>
+  </body>
+</html>

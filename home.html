@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicio</title>
+    <link rel="preload" as="image" href="background.jpg" />
+    <link
+      rel="preload"
+      as="font"
+      href="fonts/Inter-VariableFont.ttf"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="home">
+    <header class="site-head">
+  <nav class="midnav" aria-label="Navegación principal">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+    </header>
+
+    <main class="wrap page">
+      <section id="sobre-mi" class="panel">
+        <h2>Sobre mí</h2>
+        <p>Me interesa que las decisiones se entiendan. Soy analista de datos orientado a negocio, en continua formación con experiencia en trato directo con clientes y coordinación de equipos, 
+          Trabajo el ciclo completo: extracción y depuración desde múltiples fuentes, análisis exploratorio y construcción de reportes/dashboards accionables.
+          Priorizo la usabilidad del deliverable siempre centrado en las iteraciones (feedback loop, diseño centrado en el usuario) para acelerar la toma de decisiones.
+Stack en progreso: Excel avanzado, Python (pandas), SQL y visualización (Power BI/Tableau).</p>
+      </section>
+
+      <section id="experiencia" class="panel">
+        <h2>Experiencia</h2>
+        <ul>
+          <li>
+            <strong
+              >Southex Managment - Responsable de Presupuestos | 2023 - actualidad</strong
+            >
+            — Elaboración del presupuesto, automatización de alertas, flujos especiales (licitaciones, pricing), gráficos para agilizar la toma de decisiones. Alimentación de los datos para el area de planificación y otros sectores. Reportería para distintas áreas. 
+          </li>
+          <li>
+            <strong>ALCANZO - Data Analyst | 2020 - 2023</strong> — Extracción y análisis de datos, construcción de reportes, automatización de consultas, gestión de tickets/incidencias, carga de lotes al discador y soporte operativo en tiempo real, estandarizando métricas y definiciones para consistencia entre áreas y tableros.
+          </li>
+          <li>
+            <strong>ALCANZO - Farming & Customer Success | 2019 - 2020</strong>
+            — Prospección, venta y activación de cuentas en Mercado Envíos Full
+            (requisitos operativos, primera remesa y puesta en marcha). Farming
+            de cuentas onboarded: aumento de stock, rotación y cobertura de
+            catálogo. Capacitación y seguimiento de equipo comercial; control de
+            pipeline y calidad de pitch. Gestión de métricas (fillrate, tiempos,
+            cancelaciones) y planes de mejora por cuenta.
+          </li>
+          <li>
+            <strong>SL Producciones - Coordinador | 2016 - 2019</strong> —
+            Producción integral de eventos sociales y corporativos:
+            planificación, logística y coordinación on-site. Producción técnica
+            (audio e iluminación) armado y coordinación de equipos montajes.
+            Gestión clientes: preventa, presupuestos y seguimiento pos-evento.
+            Negociación y pagos a proveedores. Sistemas y entorno digital:
+            estructura de carpetas y permisos, estandarización de archivos,
+            backups; instalación y configuración de software operadores y
+            soporte/contingencias durante el evento. Marketing y redes:
+            calendario editorial, creación de contenido. Configuración y
+            optimización de campañas en redes con seguimiento de KPIs.
+          </li>
+        </ul>
+      </section>
+
+      <section id="proyectos" class="panel">
+        <h2>Proyectos</h2>
+        <ul>
+          <li><strong>Proyecto 1</strong> — descripción o enlace.</li>
+          <li><strong>Proyecto 2</strong> — descripción o enlace.</li>
+        </ul>
+      </section>
+
+      <section id="contacto" class="panel">
+        <h2>Contacto</h2>
+        <p>
+          Email:
+          <a href="mailto:francurti15@gmail.com">francurti15@gmail.com</a>
+        </p>
+        <p>
+          LinkedIn: <a href="#" target="_blank" rel="noopener">tu perfil</a>
+        </p>
+      </section>
+    </main>
+
+    <div id="coords"></div>
+    <script>
+      (function () {
+        const el = document.getElementById("coords");
+        const pad = (n) => String(n).padStart(4, " ");
+        document.addEventListener("mousemove", (e) => {
+          el.textContent = `X: ${pad(e.clientX)}  Y: ${pad(e.clientY)}`;
+        });
+      })();
+    </script>
+
+    <script>
+  (function () {
+    const nav = document.querySelector('.midnav');
+    function onScroll() {
+      if (window.scrollY > 2) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // set inicial al cargar
+  })();
+</script>
+
+  </body>
+</html>
