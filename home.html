@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -16,23 +16,28 @@
   </head>
   <body class="home">
     <header class="site-head">
-  <nav class="midnav" aria-label="Navegación principal">
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
-
+      <nav class="midnav" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </header>
 
     <main class="wrap page">
       <section id="sobre-mi" class="panel">
         <h2>Sobre mí</h2>
-        <p>Me interesa que las decisiones se entiendan. Soy analista de datos orientado a negocio, en continua formación con experiencia en trato directo con clientes y coordinación de equipos, 
-          Trabajo el ciclo completo: extracción y depuración desde múltiples fuentes, análisis exploratorio y construcción de reportes/dashboards accionables.
-          Priorizo la usabilidad del deliverable siempre centrado en las iteraciones (feedback loop, diseño centrado en el usuario) para acelerar la toma de decisiones.
-Stack en progreso: Excel avanzado, Python (pandas), SQL y visualización (Power BI/Tableau).</p>
+        <p>
+          Me interesa que las decisiones se entiendan. Soy analista de datos
+          orientado a negocio, en continua formación con experiencia en trato
+          directo con clientes y coordinación de equipos, Trabajo el ciclo
+          completo: extracción y depuración desde múltiples fuentes, análisis
+          exploratorio y construcción de reportes/dashboards accionables.
+          Priorizo la usabilidad del deliverable siempre centrado en las
+          iteraciones (feedback loop, diseño centrado en el usuario) para
+          acelerar la toma de decisiones. Stack en progreso: Excel avanzado,
+          Python (pandas), SQL y visualización (Power BI/Tableau).
+        </p>
       </section>
 
       <section id="experiencia" class="panel">
@@ -40,12 +45,20 @@ Stack en progreso: Excel avanzado, Python (pandas), SQL y visualización (Power 
         <ul>
           <li>
             <strong
-              >Southex Managment - Responsable de Presupuestos | 2023 - actualidad</strong
+              >Southex Managment - Responsable de Presupuestos | 2023 -
+              actualidad</strong
             >
-            — Elaboración del presupuesto, automatización de alertas, flujos especiales (licitaciones, pricing), gráficos para agilizar la toma de decisiones. Alimentación de los datos para el area de planificación y otros sectores. Reportería para distintas áreas. 
+            — Elaboración del presupuesto, automatización de alertas, flujos
+            especiales (licitaciones, pricing), gráficos para agilizar la toma
+            de decisiones. Alimentación de los datos para el area de
+            planificación y otros sectores. Reportería para distintas áreas.
           </li>
           <li>
-            <strong>ALCANZO - Data Analyst | 2020 - 2023</strong> — Extracción y análisis de datos, construcción de reportes, automatización de consultas, gestión de tickets/incidencias, carga de lotes al discador y soporte operativo en tiempo real, estandarizando métricas y definiciones para consistencia entre áreas y tableros.
+            <strong>ALCANZO - Data Analyst | 2020 - 2023</strong> — Extracción y
+            análisis de datos, construcción de reportes, automatización de
+            consultas, gestión de tickets/incidencias, carga de lotes al
+            discador y soporte operativo en tiempo real, estandarizando métricas
+            y definiciones para consistencia entre áreas y tableros.
           </li>
           <li>
             <strong>ALCANZO - Farming & Customer Success | 2019 - 2020</strong>
@@ -80,15 +93,42 @@ Stack en progreso: Excel avanzado, Python (pandas), SQL y visualización (Power 
         </ul>
       </section>
 
-      <section id="contacto" class="panel">
+      <section id="contacto" class="panel contacto">
         <h2>Contacto</h2>
-        <p>
-          Email:
-          <a href="mailto:francurti15@gmail.com">francurti15@gmail.com</a>
-        </p>
-        <p>
-          LinkedIn: <a href="#" target="_blank" rel="noopener">tu perfil</a>
-        </p>
+
+        <div class="contacto-wrapper">
+          <a class="contacto-card" href="mailto:francurti15@gmail.com">
+            <span>📧</span>
+            <div>
+              <strong>Email</strong>
+              <p>francurti15@gmail.com</p>
+            </div>
+          </a>
+
+          <a
+            class="contacto-card"
+            href="https://www.linkedin.com/in/franccurti/"
+            target="_blank"
+          >
+            <span>💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <p>Ver perfil</p>
+            </div>
+          </a>
+
+          <a
+            class="contacto-card"
+            href="https://wa.me/5491132048264"
+            target="_blank"
+          >
+            <span>📱</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>+54 9 11 3204-8264</p>
+            </div>
+          </a>
+        </div>
       </section>
     </main>
 
@@ -104,16 +144,15 @@ Stack en progreso: Excel avanzado, Python (pandas), SQL y visualización (Power 
     </script>
 
     <script>
-  (function () {
-    const nav = document.querySelector('.midnav');
-    function onScroll() {
-      if (window.scrollY > 2) nav.classList.add('is-scrolled');
-      else nav.classList.remove('is-scrolled');
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // set inicial al cargar
-  })();
-</script>
-
+      (function () {
+        const nav = document.querySelector(".midnav");
+        function onScroll() {
+          if (window.scrollY > 2) nav.classList.add("is-scrolled");
+          else nav.classList.remove("is-scrolled");
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll(); // set inicial al cargar
+      })();
+    </script>
   </body>
 </html>

@@ -7,22 +7,34 @@
 }
 @font-face {
   font-family: "Inter";
-  src: url("./fonts/Inter-VariableFont-Italic.ttf") format("truetype");
+  src: url("./fonts/Inter-VariableFont-Italic-.ttf") format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
-
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
 }
-
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-/* Fondo y layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+} /* Fondo y layout */
 .hero {
   min-height: 100svh;
   display: grid;
@@ -31,11 +43,9 @@ body {
   background: url("background.jpg") center / cover no-repeat fixed;
 }
 body.home {
-  background: url("background.jpg") center / cover no-repeat fixed;
+  background: url("background.jpg") center / cover no-repeat;
   color: #fff;
-}
-
-/* Contenido del hero */
+} /* Contenido del hero */
 .hero__content {
   color: #fff;
   display: grid;
@@ -51,9 +61,7 @@ body.home {
 .hero__content p {
   margin: 0;
   font-size: clamp(1rem, 2vw, 1.125rem);
-}
-
-/* Botón mínimo con solo borde alrededor del texto */
+} /* Botón mínimo con solo borde alrededor del texto */
 .btn {
   display: inline-block;
   justify-self: center;
@@ -64,9 +72,7 @@ body.home {
   background: transparent;
   text-decoration: none;
   font-weight: 1000;
-}
-
-/* Home */
+} /* Home */
 .topbar {
   color: #fff;
   padding: 14px 0;
@@ -83,32 +89,26 @@ body.home {
 .content {
   padding: 48px 0 72px;
   line-height: 1.6;
-}
-
-
-/* Coordenadas: sin fondo ni borde + auto-contraste con la foto */
-#coords{
+} /* Coordenadas: sin fondo ni borde + auto-contraste con la foto */
+#coords {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background: transparent;   /* sin fondo */
-  border: 0;                 /* sin borde */
-  color: #fff;               /* base: blanco */
-  mix-blend-mode: difference;/* se invierte según el fondo (blanco↔negro) */
+  background: transparent; /* sin fondo */
+  border: 0; /* sin borde */
+  color: #fff; /* base: blanco */
+  mix-blend-mode: difference; /* se invierte según el fondo (blanco↔negro) */
   font: 13px/1.2 monospace;
-  padding: 0;                /* solo texto */
+  padding: 0; /* solo texto */
   pointer-events: none;
   z-index: 9999;
-}
-
-
-/* ====== Experiencia (sin tocar el texto) ====== */
-#experiencia ul{
+} /* ====== Experiencia (sin tocar el texto) ====== */
+#experiencia ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#experiencia li{
+#experiencia li {
   background: #fff;
   color: #111;
   border: 1px solid #e6e6e6;
@@ -117,66 +117,161 @@ body.home {
   margin: 12px 0;
   line-height: 1.55;
 }
-#experiencia li strong{
-  display: block;           /* título arriba */
+#experiencia li strong {
+  display: block; /* título arriba */
   margin: 0 0 6px;
   font-size: 1.05rem;
   font-weight: 800;
 }
-#experiencia li::marker{ content: none; } /* sin viñeta por estética */
-
-/* En pantallas medianas, un poco más compacto */
-@media (min-width: 640px){
-  #experiencia li{ padding: 16px 18px; }
-  #experiencia li strong{ font-size: 1.1rem; }
+#experiencia li::marker {
+  content: none;
+} /* sin viñeta por estética */ /* En pantallas medianas, un poco más compacto */
+@media (min-width: 640px) {
+  #experiencia li {
+    padding: 16px 18px;
+  }
+  #experiencia li strong {
+    font-size: 1.1rem;
+  }
+} /* NAV centrada + modo "top" vs "scrolled" */
+html {
+  scroll-behavior: smooth;
 }
-
-
-/* NAV centrada + modo "top" vs "scrolled" */
-html { scroll-behavior: smooth; }
-
-.site-head{
+.site-head {
   position: sticky;
   top: 12px;
   z-index: 1000;
   display: grid;
   place-items: center;
   padding: 0 12px;
-}
-
-/* Estado por defecto: en el tope (sin fondo ni borde, texto negro) */
-.midnav{
-  display: flex; align-items: center; justify-content: center; gap: 18px;
+} /* Estado por defecto: en el tope (sin fondo ni borde, texto negro) */
+.midnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
   padding: 8px 14px;
   background: transparent;
-  border: none;                 /* sin borde */
+  border: none; /* sin borde */
   border-radius: 999px;
-  color: #111;                  /* texto negro */
+  color: #111; /* texto negro */
   white-space: nowrap;
-  overflow-x: auto; -webkit-overflow-scrolling: touch;
-  transition: background-color .18s ease, color .18s ease, box-shadow .18s ease;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
 }
-.midnav a{
-  color: inherit; text-decoration: none; font-weight: 700; font-size: .95rem;
-  padding: 6px 8px; border-radius: 999px;
+.midnav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 6px 8px;
+  border-radius: 999px;
 }
-.midnav a:hover{ text-decoration: underline; }
-
-/* Estado con scroll: fondo negro y texto blanco */
-.midnav.is-scrolled{
-  background: #000;             /* negro sólido para máxima legibilidad */
-  color: #fff;                  /* texto blanco */
-  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+.midnav a:hover {
+  text-decoration: underline;
+} /* Estado con scroll: fondo negro y texto blanco */
+.midnav.is-scrolled {
+  background: #000; /* negro sólido para máxima legibilidad */
+  color: #fff; /* texto blanco */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   border: none;
 }
-.midnav.is-scrolled a:hover{
-  background: rgba(255,255,255,.12);
+.midnav.is-scrolled a:hover {
+  background: rgba(255, 255, 255, 0.12);
   text-decoration: none;
+} /* Que el ancla no quede tapada por la barra */
+section[id] {
+  scroll-margin-top: 90px;
+} /* Aire antes del primer panel */
+.page > .panel:first-of-type {
+  margin-top: 16px;
 }
 
-/* Que el ancla no quede tapada por la barra */
-section[id]{ scroll-margin-top: 90px; }
+/* Contenedor: evita que el texto toque los bordes de la pantalla */
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 48px;
+}
 
-/* Aire antes del primer panel */
-.page > .panel:first-of-type{ margin-top: 16px; }
+/* Tarjeta legible detrás de cada sección, para que el texto no
+   dependa de qué parte de la foto de fondo quede atrás */
+.panel {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 24px;
+  margin: 16px 0;
+}
 
+.hero__content p {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+/* CONTENEDOR GENERAL */
+.contacto {
+  text-align: center;
+}
+
+.contacto-wrapper {
+  width: 100%;
+}
+
+/* CAJA GRANDE (tipo glass) */
+.contacto-wrapper {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 24px;
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+/* TARJETAS INDIVIDUALES */
+.contacto-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 12px;
+
+  padding: 14px 16px;
+  margin-bottom: 12px;
+
+  text-decoration: none;
+  color: #fff;
+
+  transition: all 0.2s ease;
+}
+
+/* HOVER PRO */
+.contacto-card:hover {
+  transform: translateY(-3px);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* ICONO */
+.contacto-card span {
+  font-size: 1.6rem;
+}
+
+/* TEXTO */
+.contacto-card strong {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.contacto-card p {
+  margin: 0;
+  font-size: 1rem;
+}
